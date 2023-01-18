@@ -8,14 +8,14 @@ from django.urls import reverse
 
 # Create your views here.
 
-"""
+
 def inicio(request):
     return render(
         request=request,
         template_name='users/home.html',
     )
 
-"""
+
 
 """
 def login(request):
