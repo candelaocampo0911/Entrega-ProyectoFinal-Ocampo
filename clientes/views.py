@@ -39,9 +39,9 @@ def listar_clientes(request):
     )
 
 
-"""
+
 def crear_clientes(request): 
-    if request.method == "POST"
+    if request.method == "POST":
         formulario = ClienteFormulario(request.POST)
 
         if formulario.is_valid():
@@ -52,33 +52,31 @@ def crear_clientes(request):
                             fecha_de_nacimiento=data['fecha_de_nacimiento'])
             
             cliente.save()
-"""
-
-"""
-def registro_clientes(request):
-        if request.method == "POST":
-            
+            creacion_exitosa = reverse('listar_clientes')
+            return redirect(creacion_exitosa)
         
-        if formulario.is_valid():
-            data = formulario.cleaned_data
-            cliente = Clientes(nombre=data['nombre'],
-                            email=data['email'],
-                            direccion=data['direccion'],
-                            fecha_de_nacimiento=data['fecha_de_nacimiento'],
-
-
-                            )
-
-            cliente.save()
-            url_exitosa = reverse('Articulos')
-            return redirect(url_exitosa)
-
-    else:  # GET
-        formulario = RegistroUsuario()
+    else: #GET
+        formulario = ClienteFormulario()
     return render(
-        request=request,
-        template_name='users/registro.html',
-        context={'formulario': formulario},
-    )
+        request=request ,
+        template_name = 'clientes/crear_clientes.html' ,
+        context={'formulario':formulario} ,
+    )    
 
-"""
+
+
+def buscar_cliente(request):
+    if request.method == "POST": 
+        data = request.POST
+        clientes = Clientes.objects.filter(
+            Q(nombre__contains=data['busqueda']) | Q(apellido__exact=data['busqueda'])
+            )
+        
+        contexto= {
+            'clientes' : clientes
+        }
+    return render(
+        request=request ,
+        template_name = 'clientes/buscar_clientes.html', 
+        context=contexto , 
+    )
