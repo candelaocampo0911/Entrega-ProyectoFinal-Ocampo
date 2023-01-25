@@ -1,0 +1,30 @@
+{% extends "proyecto_django/inicio.html" %}
+
+{% block titulo %}
+
+<title>Supermercado Candela ARTICULOS </title>
+
+{% endblock titulo %}
+
+
+{% block contenido %}
+<section>
+    <div>
+        <h1>Lista de articulos</h1>
+        <a href="{% url "crear_articulo" %}">Añadir articulo</a>
+        <br></br>
+        
+        <ul>
+            {% for articulo in articulo %}<br>
+            <li>Codido de articulo: {{articulo.codigo_de_articulo}}<br>
+                Marca: {{articulo.marca}}<br>
+                Peso: {{articulo.peso}}<br>
+            
+            
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</section>
+{% endblock contenido %}

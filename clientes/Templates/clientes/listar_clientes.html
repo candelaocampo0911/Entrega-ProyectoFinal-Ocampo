@@ -1,0 +1,30 @@
+{% extends "clientes/inicio.html" %}
+
+{% block titulo %}
+
+<title>Supermercado Candela CLIENTES </title>
+
+{% endblock titulo %}
+
+
+{% block contenido %}
+<section>
+    <div>
+        <h1>Lista de clientes</h1>
+        <a href="{% url "crear_clientes" %}">Añadir cliente</a>
+        <br></br>
+        
+        <ul>
+            {% for cliente in clientes %}<br>
+            <li>Nombre: {{cliente.nombre}}<br>
+                Email: {{cliente.email}}<br>
+                Direccion: {{cliente.direccion}}<br>
+                Fecha Nacimiento: {{cliente.fecha_nacimiento}}<br>
+            
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</section>
+{% endblock contenido %}

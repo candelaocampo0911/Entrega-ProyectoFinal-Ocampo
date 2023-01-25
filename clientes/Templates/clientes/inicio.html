@@ -1,7 +1,5 @@
-{% extends 'products/base.html'%}
 {% load static %}
 
-{% block contenido %}
 
 
 <html lang="en">
@@ -19,13 +17,13 @@
 <body>
 
     <div id="contenedor">
+        {% block contenido %}
         <div id="central">
             <div id="login">
                 <div class="titulo">
                     Bienvenido al Supermercado Candela
                 </div>
                 <div>
-                <a href="{% url 'login'%}">
                 <button type="btn-btn-primary" title="Ingresar" >
                     
                     Ingresar
@@ -37,9 +35,9 @@
             </div>
             
         </div>
+        {% endblock contenido %}
     </div>
         
 </body>
 
 </html>
-{% endblock contenido %}

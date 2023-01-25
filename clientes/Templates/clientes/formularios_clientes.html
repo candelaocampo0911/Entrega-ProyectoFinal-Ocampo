@@ -1,0 +1,22 @@
+
+{% extends "clientes/inicio.html" %}
+
+{% block titulo %}
+
+<title>Supermercado Candela</title>
+
+{% endblock titulo %}
+
+
+{% block subtitulo %} Crear cliente{% endblock subtitulo %}
+
+{% block contenido %}
+
+<form action={% url "crear_clientes" %} method="post">
+    {% csrf_token %}
+    {{ formulario.as_p }}
+<input type="submit" value="Enviar">
+
+</form>
+
+{% endblock contenido %}

@@ -1,0 +1,28 @@
+{% extends "proyecto_django/inicio.html" %}
+
+{% block titulo %}
+
+<title> Supermercado Candela MEDIO DE PAGO </title>
+
+{% endblock titulo %}
+
+
+{% block contenido %}
+<section>
+    <div>
+        <h1>Lista de medio de pago</h1>
+        <a href="{% url "crear_medio_pago" %}">Añadir medio de pago</a>
+        <br></br>
+        
+        <ul>
+            {% for medio_pago in medio_pago %}<br>
+            <li>Medio de pago: {{Medio_pago.medio_pago}}<br>
+            
+            
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</section>
+{% endblock contenido %}

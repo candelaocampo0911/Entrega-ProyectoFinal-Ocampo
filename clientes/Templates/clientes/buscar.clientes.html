@@ -1,0 +1,22 @@
+{% extends "proyecto_django/inicio.html" %}
+
+{% block titulo %}
+
+<title>Clientes del Supermercado Candela</title>
+
+{% endblock titulo %}
+
+
+{% block subtitulo %} Buscar cliente {% endblock subtitulo %}
+
+{% block contenido %}
+
+<form action={% url "buscar_cliente" %} method="post">
+    {% csrf_token %}
+    <p>Nombre</p>
+    <input type="text" name="nombre">
+    <input type="submit" value="Enviar">
+
+</form>
+
+{% endblock contenido %}
