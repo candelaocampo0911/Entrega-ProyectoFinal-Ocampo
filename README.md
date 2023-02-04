@@ -9,8 +9,7 @@ Blog Online del Supermercado Candela. Reseñas.
 
 DATOS GENERALES
 LINK Video sobre funcionamiento de la app
-Este es el link de awesome, pero no todos lo pueden ver: https://www.awesomescreenshot.com/video/14538140?key=3e23f69945b5f420c1c7253333bca463
-
+Este es el link de loom : https://www.loom.com/share/45cdcd6fcbf54b2c8c80098031bbd3ae
 
 Blog para poder realizar reseñas sobre el Supermercado Candela.(en contruccion)
 Trabajado desde VSC en Windows
