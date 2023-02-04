@@ -1,0 +1,22 @@
+{% extends "critica_cine/base.html" %}
+
+{% block titulo %}
+
+<title>Blog de Supermercado Candela: Descripción </title>
+
+
+
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<h1> {{ object.nombre_articulo}}</h1><br>
+<b>Descripcion: {{ object.descripcion}} </b>
+
+<br>
+<a href="{% url "articulos" %} >Volver a la lista</a>
+
+
+
+{% endblock contenido %}

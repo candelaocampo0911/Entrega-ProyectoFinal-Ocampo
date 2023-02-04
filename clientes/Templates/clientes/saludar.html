@@ -1,0 +1,18 @@
+{% extends "clientes/base.html" %}
+
+{% block titulo %}
+
+<title>Blog del Supermercado Candela </title>
+
+{% endblock titulo %}
+
+{% block contenido %}
+
+        
+        <h1>Bienvenido: {{ request.user.firs_name }}</h1>
+        <h1>Más historias: Blog del Supermercado Candela. Deja tu detalle! Conta sobre nuestros productos!</h1>
+        <img src="{{ user.avatar.imagen.url }}" />
+        
+        
+
+    {% endblock contenido %}

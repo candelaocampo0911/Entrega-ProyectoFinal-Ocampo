@@ -1,0 +1,22 @@
+{% extends "clientes/base.html" %}
+
+{% block titulo %}
+
+<title>Blog de Supermercado Candela: Descripción </title>
+
+
+
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<b>Director: {{ object.medio_pago}}</b><br>
+<b>Descripcion: {{ object.descripcion}} </b>
+
+<br>
+<a href="{% url "medio_pago" %} >Volver a la lista</a>
+
+
+
+{% endblock contenido %}

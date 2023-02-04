@@ -2,17 +2,17 @@
 
 {% block titulo %}
 
-<title>Blog del Supermercado Candela: Deja tu detalle. Aporta al blog! </title>
+<title>Blog del Supermercado Candela </title>
 
 {% endblock titulo %}
 
 
 {% block contenido %}
-
+<p> Te has deslogueado.</p>
 <form  method="post">
     {% csrf_token %}
     {{ form.as_p}}
-    <input type="submit" value="Iniciar sesión"/>
+    
 </form>
 
 {% endblock contenido %}

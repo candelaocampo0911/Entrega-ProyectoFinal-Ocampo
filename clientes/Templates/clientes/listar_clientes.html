@@ -15,7 +15,7 @@
         <br></br>
         
         <ul>
-            {% for cliente in clientes %}<br>
+            {% for clientes in clientes %}<br>
             <li>Nombre: {{cliente.nombre}}<br>
                 Email: {{cliente.email}}<br>
                 Direccion: {{cliente.direccion}}<br>
@@ -24,6 +24,7 @@
             </li>
             {% endfor %}
         </ul>
+
     </div>
 
 </section>
