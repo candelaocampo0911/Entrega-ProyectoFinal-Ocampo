@@ -108,7 +108,7 @@ def crear_medio_pago(request):
             medio_pago = Medio_pago(medio_de_pago=data["medio_de_pago"])
             
             medio_pago.save()
-            creacion_exitosa = reverse('listar_medio_pago')
+            creacion_exitosa = reverse('medio_pago')
             return redirect(creacion_exitosa)
         
     else: #GET
@@ -132,7 +132,7 @@ def crear_articulos(request):
                             peso=data['peso'])
             
             articulos.save()
-            creacion_exitosa = reverse('listar_articulos')
+            creacion_exitosa = reverse('articulos')
             return redirect(creacion_exitosa)
         
     else: #GET
