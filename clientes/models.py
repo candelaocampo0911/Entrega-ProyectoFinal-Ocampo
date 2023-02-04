@@ -9,7 +9,6 @@ class Clientes(models.Model):
     email = models.EmailField()
     direccion = models.CharField(max_length=256)
     fecha_nacimiento= models.DateField()
-    comentarios = models.TextField()
 
     def __str__(self):
         return f" {self.nombre} ,  {self.email} , {self.direccion} , {self.fecha_nacimiento} , {self.compra} , {self.comentarios} "
@@ -31,7 +30,7 @@ class Articulos(models.Model):
     peso = models.CharField(max_length=256)
 
     def __str__(self):
-        return f"{self.codigo_del_producto} ,  {self.marca} ,  {self.peso} "
+        return f"{self.codigo_del_articulo} ,  {self.marca} ,  {self.peso} "
 
 
 

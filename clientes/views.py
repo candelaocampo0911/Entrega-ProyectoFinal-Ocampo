@@ -83,7 +83,7 @@ def crear_clientes(request):
                             email=data['email'],
                             direccion=data['direccion'],
                             fecha_nacimiento=data['fecha_nacimiento'],
-                            comentarios=data['comentarios'],)
+                            )
             
             cliente.save()
             creacion_exitosa = reverse('clientes')
@@ -115,7 +115,7 @@ def crear_medio_pago(request):
         formulario = MedioPagoformulario()
     return render(
         request=request ,
-        template_name = 'clientes/crear_medio_pago.html' ,
+        template_name = 'clientes/formularios_medio_pago.html' ,
         context={'formulario':formulario} ,
     )    
 
@@ -127,7 +127,7 @@ def crear_articulos(request):
 
         if formulario.is_valid():
             data = formulario.cleaned_data
-            articulos = Articulos(codigo_de_articulo=data['codigo_de_articulo'],
+            articulos = Articulos(codigo_del_articulo=data['codigo_del_articulo'],
                             marca=data['marca'],
                             peso=data['peso'])
             
@@ -139,7 +139,7 @@ def crear_articulos(request):
         formulario = Articulosformulario()
     return render(
         request=request ,
-        template_name = 'clientes/crear_articulos.html' ,
+        template_name = 'clientes/formularios_articulos.html' ,
         context={'formulario':formulario} ,
     )    
 

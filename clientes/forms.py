@@ -10,7 +10,6 @@ class Clientesformulario(forms.Form):
     email=forms.EmailField()
     direccion=forms.CharField(max_length=212)
     fecha_nacimiento=forms.DateField()
-    comentarios=forms.Textarea()
     
 
 class MedioPagoformulario(forms.Form): 
@@ -18,7 +17,7 @@ class MedioPagoformulario(forms.Form):
 
 
 class Articulosformulario(forms.Form): 
-    codigo_de_articulo = forms.CharField(max_length=256)
+    codigo_del_articulo = forms.CharField(max_length=256)
     marca = forms.CharField(max_length=256)
     peso = forms.CharField(max_length=256)
 
